@@ -30,10 +30,6 @@ gulp.task('ejs',()=>{
 gulp.task('watch', function() {  
     livereload.listen();
     gulp.watch('public/scss/*.scss', ['sass']);
-    gulp.watch('public/css/*.css', function(file){
-        livereload.changed(file)
-    });
-
     gulp.watch('public/js/*.js', ['scripts']);
     gulp.watch('views/*.ejs', ['ejs']);
     
